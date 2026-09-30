@@ -508,7 +508,7 @@ dialog[open]{animation:pop .25s ease both}
     return "Hi Antonette, "+(n?"this is "+n+". ":"")+"I found your website and I'd like to talk about hiring you as a Virtual Assistant."+(m?"\n\nWhat I need help with: "+m:"");
   }
   function refresh(){
-    wa.href="https://wa.me/"+WA+"?text="+encodeURIComponent(text());
+    wa.href="https://api.whatsapp.com/send?phone="+WA+"&text="+encodeURIComponent(text());
     mail.href="mailto:"+MAIL+"?subject="+encodeURIComponent("Hiring inquiry from your website")+"&body="+encodeURIComponent(text());
   }
   name.addEventListener('input',refresh); msg.addEventListener('input',refresh); refresh();
