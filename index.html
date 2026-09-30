@@ -509,8 +509,8 @@ dialog[open]{animation:pop .25s ease both}
   }
   function refresh(){
     wa.href="https://api.whatsapp.com/send?phone="+WA+"&text="+encodeURIComponent(text());
-    mail.href="mailto:"+MAIL+"?subject="+encodeURIComponent("Hiring inquiry from your website")+"&body="+encodeURIComponent(text());
-  }
+    mail.href="https://mail.google.com/mail/?view=cm&fs=1&to="+MAIL+"&subject="+encodeURIComponent("Hiring inquiry from your website")+"&body="+encodeURIComponent(text());
+}
   name.addEventListener('input',refresh); msg.addEventListener('input',refresh); refresh();
 
   function open(){
